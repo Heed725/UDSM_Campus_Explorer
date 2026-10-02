@@ -1,0 +1,1 @@
+window.CAMPUS_CONFIG = {"dataPath": "data/campus.json", "boundaryLabel": "Chuo Kikuu boundary", "csvPrefix": "udsm-main", "boundaryPopup": "Full Chuo Kikuu triangle \u2014 OpenStreetMap administrative subward (relation 5608085).", "roadNote": "Clipped to Chuo Kikuu"};

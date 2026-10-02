@@ -1,0 +1,23 @@
+name: Validate explorers
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check JavaScript syntax
+        run: |
+          node --check docs/app.js
+          node --check docs/analysis.js
+          node --check docs/config.js
+          node --check docs/coict/config.js
+      - name: Validate datasets and flood exposure
+        run: node checks/validate.cjs

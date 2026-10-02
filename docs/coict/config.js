@@ -1,0 +1,1 @@
+window.CAMPUS_CONFIG = {"dataPath": "../data/coict.json", "boundaryLabel": "CoICT campus boundary", "csvPrefix": "udsm-coict", "boundaryPopup": "CoICT Kijitonyama campus \u2014 OpenStreetMap campus polygon (way 478260661).", "roadNote": "Clipped to CoICT campus"};
