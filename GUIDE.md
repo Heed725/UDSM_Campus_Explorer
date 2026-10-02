@@ -13,6 +13,27 @@ Independent web GIS inspired by the Tabata Ward Flood & Infrastructure Explorer.
 7. Open **Data table**, choose a layer, search or sort its records, and use **Locate** to inspect it on the map.
 8. **Download CSV** exports every record in the current filtered table, not just the visible page. Coordinates are feature bounding-box centres, not entrances or surveyed GPS points.
 
+## Amenity categories
+
+Use **Amenity category** on the map or in the amenities table to select a group. Both filters stay in sync. Search works with category names as well as names, OSM types and IDs. Expand **Category legend** for colours and campus-wide counts. In the dashboard, click a category bar to show that group on the map. **Reset map view** restores all categories.
+
+The table separates **Category** from the original **OSM type**. CSV exports include both fields and follow the current table category and search filters. Building and road tables are unaffected by the amenity category filter. Map totals, dashboard counts and flood exposure always describe the complete campus dataset; the map shows its filtered amenity count below the category selector.
+
+| Category | Recorded OSM types in these datasets | Main campus | CoICT |
+| --- | --- | ---: | ---: |
+| Education & research | college, university, school, library, coworking_space | 39 | 2 |
+| Food & drink | cafe, restaurant, fast_food, food_court, bar | 24 | 1 |
+| Banking & money | bank, atm, bureau_de_change | 14 | 0 |
+| Health & veterinary | clinic, pharmacy, veterinary | 5 | 0 |
+| Transport & parking | parking, parking_space, bus_station, fuel | 24 | 1 |
+| Community, worship & leisure | community_centre, place_of_worship, grave_yard, cinema | 8 | 0 |
+| Student housing | student_accommodation | 1 | 0 |
+| Administration & security | office, police | 10 | 0 |
+| Water & sanitation | toilets, drinking_water, waste_disposal | 9 | 3 |
+| **Total mapped records** | | **134** | **7** |
+
+Classification uses the recorded `amenity` tag, not guessed names or operator ownership. Original source types and records are unchanged. Only groups with mapped records appear in the selected campus. Newly introduced types without a mapping appear under **Other amenities**. Categories have distinct map colours; flood-exposed amenities retain their category colour with a red outline. The shared mapping is in `docs/amenity-categories.js`.
+
 ## Flood extent from QGIS
 
 No flood dataset is bundled and no initial flood exposure is claimed.

@@ -7,7 +7,7 @@ Two independent interactive campus GIS explorers inspired by the Tabata Flood & 
 | UDSM Main Campus | Full Chuo Kikuu triangle, OSM relation 5608085 (~5.06 km²) | 1,213 | 134 | 54.44 km |
 | CoICT Campus | CoICT Kijitonyama campus, OSM way 478260661 (~7.24 ha) | 22 | 7 | 1.24 km |
 
-**Once GitHub Pages is enabled:**
+**Live explorers:**
 
 - Main campus: https://heed725.github.io/UDSM_Campus_Explorer/
 - CoICT only: https://heed725.github.io/UDSM_Campus_Explorer/coict/
@@ -17,6 +17,7 @@ Two independent interactive campus GIS explorers inspired by the Tabata Flood & 
 - OpenStreetMap, CARTO light and Esri satellite basemaps.
 - Building footprints, roads and paths, amenity markers and campus boundary.
 - Search, feature inspection and direct OpenStreetMap source links.
+- Amenity categories with distinct map colours, shared map/table filters, category counts and grouped dashboard charts.
 - Dashboard charts for buildings, amenities and road lengths.
 - Searchable, sortable data table, pagination, map location and CSV export.
 - Flood-extent GeoJSON loading, building/amenity exposure analysis and exposed-building filter.
@@ -68,6 +69,7 @@ docs/                 Complete GitHub Pages website
   data/coict.json     CoICT GeoJSON dataset
   app.js              Shared interface and map logic
   analysis.js         Shared flood analysis
+  amenity-categories.js  Shared OSM amenity classification
   styles.css          Responsive styling
   vendor/             Bundled Leaflet and Turf, images and licenses
 source-data/          Original OSM extracts, gzip-compressed
